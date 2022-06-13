@@ -10,7 +10,9 @@ public class SessionHelper {
     public static EntityManager getEntityManager(){
         if (entityManager == null){
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("crm");
-            EntityManager entityManager = emf.createEntityManager();
+            entityManager = emf.createEntityManager();
+/*
+            emf.close();*/
         }
         return entityManager;
     }
